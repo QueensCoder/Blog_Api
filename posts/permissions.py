@@ -2,6 +2,7 @@ from rest_framework import permissions
 
 # new comments
 # custom permission creation
+# test
 
 
 class IsAuthorOrReadOnly(permissions.BasePermission):
