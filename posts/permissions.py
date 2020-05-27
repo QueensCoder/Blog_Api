@@ -1,7 +1,9 @@
 from rest_framework import permissions
 
-
+# new comments
 # custom permission creation
+
+
 class IsAuthorOrReadOnly(permissions.BasePermission):
     # need to overwrite permission classses that basepermisions has
     # this method determins if the request methods are safe methods
