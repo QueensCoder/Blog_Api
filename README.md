@@ -7,3 +7,5 @@ installs django_rest_framework , django-cors-headers
     add to installed app, corsheaders
     add to middle ware
     'corsheaders.middleware.CorsMiddleware', # new
+
+heroku addons:create heroku-postgresql:hobby-dev - create db for heroku with cli
