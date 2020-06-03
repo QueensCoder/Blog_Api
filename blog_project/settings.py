@@ -66,28 +66,17 @@ TEMPLATES = [
 WSGI_APPLICATION = 'blog_project.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/3.0/ref/settings/#databases
-
-# DATABASES = {'default': {
-
-# }}
-
 DATABASES = {
     'default': {
-        'NAME': 'postgresql-aerodynamic-85348',
-        'ENGINE': 'django.db.backends.postgresql',
-        'HOST': 'ec2-50-17-90-177.compute-1.amazonaws.com',
-        'Database': 'ddof3175di3as1',
-        'User': 'zvlydpwdmdjkmk',
-        'PASSWORD': '6c54c7525dd2813eab3014b410ed646b35f6076251279735ada9e2b99a0edb81',
-        'URI': 'postgres://zvlydpwdmdjkmk:6c54c7525dd2813eab3014b410ed646b35f6076251279735ada9e2b99a0edb81@ec2-50-17-90-177.compute-1.amazonaws.com:5432/ddof3175di3as1'
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'blog_api',
+        'USER': '',
+        'PASSWORD': '',
+        'HOST': 'localhost',
+
     }
 }
 
-
-# Password validation
-# https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
     {
