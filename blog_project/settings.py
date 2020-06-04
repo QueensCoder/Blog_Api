@@ -26,16 +26,30 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
-    # 3rd party apps
+    'django.contrib.sites',
+    # 3rd-party apps
     'rest_framework',
-    'rest_framework.authtoken',  # allows django rf to use auth tokens
+    'rest_framework.authtoken',
+
+    # all required for allauth
+    'allauth',
+    'allauth.account',  # was missing in guide
+    'allauth.socialaccount',
+    # end of all auth reqs
+
     'dj_rest_auth',
+    'dj_rest_auth.registration',
 
-    # local apps
-    'posts',
-]
+    # Local
+    'posts.apps.PostsConfig', ]
 
+# need for registration so that sitesends users emails
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+# site id is part of django sites framework that allows several sites to be hosted
+# from same djangon project
+# allauth uses site framework for site id of 1 is required as a default setting
+SITE_ID = 1
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': ['rest_framework.permissions.IsAuthenticated', ],

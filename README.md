@@ -31,3 +31,15 @@ sets up url that allows for login and logout using djrestauth
 path('api/v1/dj-rest-auth/', include('dj_rest_auth.urls'))
 
 after this is set it up it gives /logout , /login, /password/reset urls once configured to the urls path
+
+### allauth set up
+
+pipenv install django-allauth
+
+add to installed app settings
+
+• django.contrib.sites
+• allauth
+• allauth.account
+• allauth.socialaccount
+• dj_rest_auth.registration
