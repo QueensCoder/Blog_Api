@@ -1,10 +1,16 @@
-from rest_framework import generics, permissions
+from rest_framework import generics, permissions, viewsets
 from .models import Post
 from .serializers import PostSerializer, UserSerializer
 from .permissions import IsAuthorOrReadOnly
 from django.contrib.auth import get_user_model
 # is authenticated allows users to perform actions if authenticated
 from rest_framework.permissions import IsAuthenticated
+
+
+class PostViewSet(viewsets.ModelViewSet):
+    permission_classes = (IsAuthorOrReadOnly,)
+    queryset = Post.objects.all()
+    serializer_class = PostSerializer
 
 
 class PostList(generics.ListCreateAPIView):
