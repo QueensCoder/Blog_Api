@@ -26,7 +26,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # 3rd party apps
     'rest_framework',
+    'rest_framework.authtoken',  # allows django rf to use auth tokens
+    'dj_rest_auth',
+
+    # local apps
     'posts',
 ]
 
@@ -36,7 +42,7 @@ REST_FRAMEWORK = {
     # default auth classes below allow us to use both sessions and basic django auth
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework.authentication.SessionAuthentication',
-        'rest_framework.authentication.BasicAuthentication'
+        'rest_framework.authentication.TokenAuthentication',
     ],
 }
 

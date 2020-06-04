@@ -12,6 +12,7 @@ django-rest-framework = "*"
 django-heroku = "*"
 gunicorn = "*"
 psycopg2 = "*"
+dj-rest-auth = "*"
 
 [requires]
 python_version = "3.7"
