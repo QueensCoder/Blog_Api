@@ -15,6 +15,7 @@ psycopg2 = "*"
 dj-rest-auth = "*"
 django-allauth = "*"
 pyyaml = "*"
+drf-yasg = "*"
 
 [requires]
 python_version = "3.7"

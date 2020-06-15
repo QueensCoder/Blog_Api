@@ -43,3 +43,9 @@ add to installed app settings
 • allauth.account
 • allauth.socialaccount
 • dj_rest_auth.registration
+
+Schemas -
+
+install pyyaml
+
+python manage.py generateschema > openapi-schema
