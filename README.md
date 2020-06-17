@@ -49,3 +49,26 @@ Schemas -
 install pyyaml
 
 python manage.py generateschema > openapi-schema
+
+### urls
+
+admin/
+api/v1/ - to see blogcontent
+
+api-auth/
+
+## dealing with user auth when using rest framework to have users login/out/register via api end point
+
+api/v1/dj-rest-auth/
+
+## login
+
+api/v1/dj-rest-auth/login
+
+## logout
+
+api/v1/dj-rest-auth/logout
+
+api/v1/dj-rest-auth/registration/ - register a new user
+swagger/ [name='schema-swagger-ui'] - api schema
+redoc/ [name='schema-redoc'] api schema

@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     # 3rd-party apps
     'rest_framework',
+
     'rest_framework.authtoken',
 
     # all required for allauth
@@ -42,7 +43,8 @@ INSTALLED_APPS = [
     'dj_rest_auth.registration',
 
     'drf_yasg',
-    # end of 3rd part apps
+    'corsheaders',
+    # end of 3rd party apps
 
 
     # Local
@@ -66,8 +68,10 @@ REST_FRAMEWORK = {
 }
 
 MIDDLEWARE = [
+
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -145,3 +149,6 @@ STATIC_URL = '/static/'
 
 # Configure Django App for Heroku.
 django_heroku.settings(locals())
+
+# allows all cors will change to whitelist after testing
+CORS_ORIGIN_ALLOW_ALL = True
