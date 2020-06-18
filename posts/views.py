@@ -10,12 +10,11 @@ from django.contrib.auth import get_user_model
 
 # default permission in settings.py not working had to manually add is auth for permission classes
 class PostViewSet(viewsets.ModelViewSet):
-    permission_classes = (IsAuthorOrReadOnly, IsAuthenticated)
+    permission_classes = [IsAuthorOrReadOnly, ]
     queryset = Post.objects.all()
     serializer_class = PostSerializer
 
 
 class UserViewSet(viewsets.ModelViewSet):
-    permission_classes = (IsAuthenticated,)
     queryset = get_user_model().objects.all()
     serializer_class = UserSerializer
